@@ -4,7 +4,7 @@ const Hero = () => {
   return (
     <div className="relative w-full h-screen overflow-hidden">
       {/* Animated Background */}
-      <div className="absolute inset-0 area">
+      <div className="absolute inset-0 area ">
         <ul className="circles">
           <li></li>
           <li></li>
