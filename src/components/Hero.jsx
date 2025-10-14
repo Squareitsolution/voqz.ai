@@ -29,8 +29,9 @@ const Hero = () => {
         </h1>
 
         <p className="mt-6 max-w-2xl text-lg text-gray-300">
-          Custom AI systems for businesses ready to cut costs, streamline ops,
-          and scale fast.
+          Voqz.ai helps startups and enterprises automate workflows, enhance
+          productivity, and accelerate digital growth with modern, AI-inspired
+          tools and technology services.
         </p>
 
         {/* Buttons */}
@@ -39,13 +40,13 @@ const Hero = () => {
             href="#systems"
             className="px-6 py-3 rounded-xl font-semibold text-white bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 shadow-lg transition"
           >
-            Explore Systems
+           Get Started
           </a>
           <a
             href="#call"
             className="px-6 py-3 rounded-xl font-semibold text-white bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 shadow-lg transition"
           >
-            Book a Call
+            Learn More
           </a>
         </div>
       </div>

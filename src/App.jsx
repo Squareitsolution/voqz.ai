@@ -1,3 +1,4 @@
+import AboutUs from "./components/About"
 import CTASection from "./components/CTA"
 import Features from "./components/features"
 import Footer from "./components/footer"
@@ -14,8 +15,9 @@ function App() {
     <>
       <Navbar />
       <Hero />
+      <AboutUs />
       <WhatWeDo />
-      <PainPoints />
+      {/* <PainPoints /> */}
       <HowItWorks />
       <Features />
       <AnimatedTestimonial />
