@@ -1,141 +1,263 @@
-import { CheckCircle2 } from "lucide-react";
+import React, { useState } from "react";
+import {
+  Phone,
+  PhoneCall,
+  Users,
+  Zap,
+  Database,
+  PhoneForwarded,
+  Bell,
+  MessageSquare,
+  Clock,
+  Target,
+  Calendar,
+  TrendingUp,
+  DollarSign,
+  BarChart3,
+  Briefcase,
+  Workflow,
+  Mail,
+  Bot,
+} from "lucide-react";
 
-export default function AboutUs() {
-  const features = [
-    "Custom Digital Solutions",
-    "Fast and Scalable Delivery",
-    "Dedicated Technical Expertise",
-    "Future-Ready Approach",
+export default function AIVoiceSolutions() {
+  const [activeTab, setActiveTab] = useState("inbound");
+
+  const inboundFeatures = [
+    {
+      icon: Clock,
+      title: "Your AI Receptionist—Always On",
+      description:
+        "Never miss an enquiry, even at 5 AM—customers get instant help.",
+    },
+    {
+      icon: Users,
+      title: "Instant Connect – Zero Wait Time",
+      description:
+        'Manage 10+ callers at once—no frustrating "please hold" moments.',
+    },
+    {
+      icon: MessageSquare,
+      title: "Personalized AI Responses",
+      description:
+        "AI answers tailored to your business for a human-like experience.",
+    },
+    {
+      icon: Database,
+      title: "Effortless CRM Sync",
+      description: "Integrates smoothly with HubSpot, Monday, GHL, and more.",
+    },
+    {
+      icon: Phone,
+      title: "Simplified Telephony",
+      description: "Works with major providers for seamless call forwarding.",
+    },
+    {
+      icon: PhoneForwarded,
+      title: "Smart Call Transfers",
+      description:
+        "Connect callers directly to your team on your existing system.",
+    },
+    {
+      icon: Bell,
+      title: "Live Call Insights",
+      description:
+        "Send SMS and emails instantly for every enquiry—stay updated.",
+    },
+    {
+      icon: Zap,
+      title: "Unified Voice & Chat",
+      description:
+        "Transform your site into a powerful voice + chat engagement hub.",
+    },
+  ];
+
+  const outboundFeatures = [
+    {
+      icon: Target,
+      title: "AI That Handles Follow-Ups",
+      description:
+        "No more chasing payments or documents—automated reminders done right.",
+    },
+    {
+      icon: Calendar,
+      title: "Expiry Alerts Made Easy",
+      description:
+        "Notifies customers about visas, insurance, or subscriptions on time.",
+    },
+    {
+      icon: PhoneCall,
+      title: "High-Volume Calling Power",
+      description:
+        "Reach 1,000+ past clients daily—boost repeat sales effortlessly.",
+    },
+    {
+      icon: Zap,
+      title: "Instant Lead Engagement",
+      description:
+        "Connect with new leads in under 60 seconds from your site or ads.",
+    },
+    {
+      icon: DollarSign,
+      title: "Cost-Effective Bulk Calling",
+      description:
+        "Make thousands of calls at a fraction of the usual expense.",
+    },
+    {
+      icon: TrendingUp,
+      title: "Faster Conversions Guaranteed",
+      description: "Instant calls can increase booking rates by up to 72%.",
+    },
+    {
+      icon: Database,
+      title: "Seamless CRM Integration",
+      description: "Works perfectly with HubSpot, Monday, GHL, and more.",
+    },
+    {
+      icon: BarChart3,
+      title: "Real-Time Updates",
+      description:
+        "Each call triggers instant SMS or email—stay informed instantly.",
+    },
+  ];
+
+  const workflowFeatures = [
+    {
+      icon: Briefcase,
+      title: "Proven Industry Expertise",
+      description:
+        "From legal to education, we build AI that fits your sector.",
+    },
+    {
+      icon: Workflow,
+      title: "Efficient Workflows",
+      description: "Tailored automation designed to save both time and money.",
+    },
+    {
+      icon: Mail,
+      title: "AI-Powered Email Automation",
+      description:
+        "Automate emails for outreach, updates, and follow-ups easily.",
+    },
+    {
+      icon: Bot,
+      title: "Custom AI for Daily Tasks",
+      description:
+        "Automate routine work like scheduling, reports, and customer care.",
+    },
   ];
 
   return (
-    <section className="min-h-screen bg-slate-200 text-gray-900 py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
-      {/* Subtle background elements */}
-      {/* <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-blue-50 rounded-full blur-3xl opacity-60"></div>
-        <div className="absolute bottom-0 left-1/4 w-80 h-80 bg-cyan-50 rounded-full blur-3xl opacity-50"></div>
-      </div> */}
-
-      <div className="max-w-6xl mx-auto relative z-10">
+    <div className="min-h-screen bg-slate-200 py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="mb-16 animate-fade-in">
-          <h1 className="text-5xl sm:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-600 via-cyan-600 to-blue-500 bg-clip-text text-transparent">
-            Why Voqz.ai?
+        <div className="text-center mb-12">
+          <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
+            Our AI Voice Solutions
           </h1>
-          <div className="h-1 w-24 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-full mb-8"></div>
+          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+            Revolutionize your business communications with intelligent voice
+            agents
+          </p>
         </div>
 
-        {/* Main content grid */}
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-16">
-          {/* Text content */}
-          <div className="space-y-6">
-            <p className="text-lg leading-relaxed text-gray-700">
-              At Voqz.ai, we believe in{" "}
-              <span className="text-cyan-600 font-semibold">
-                simplifying technology
-              </span>
-              . Our goal is to make intelligent digital solutions accessible to
-              every business — from small startups to large enterprises.
-            </p>
-            <p className="text-lg leading-relaxed text-gray-700">
-              We combine{" "}
-              <span className="text-blue-600 font-semibold">
-                innovation, design, and strategy
-              </span>{" "}
-              to build scalable tech experiences that make an{" "}
-              <span className="text-cyan-600 font-semibold">impact</span>.
-            </p>
-
-            {/* Features list */}
-            <div className="space-y-4 pt-4">
-              {features.map((feature, index) => (
-                <div
-                  key={index}
-                  className="flex items-center gap-3 group cursor-pointer transition-transform duration-300 hover:translate-x-2"
-                >
-                  <CheckCircle2 className="w-6 h-6 text-cyan-600 flex-shrink-0 group-hover:scale-110 transition-transform duration-300" />
-                  <span className="text-base text-gray-700 group-hover:text-cyan-600 transition-colors duration-300 font-medium">
-                    {feature}
-                  </span>
-                </div>
-              ))}
+        {/* Tab Buttons */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+          <button
+            onClick={() => setActiveTab("inbound")}
+            className={`px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 ${
+              activeTab === "inbound"
+                ? "bg-slate-900 text-white shadow-lg scale-105"
+                : "bg-white text-slate-700 hover:bg-slate-50 shadow"
+            }`}
+          >
+            <div className="flex items-center justify-center gap-2">
+              <Phone className="w-5 h-5" />
+              <span>Inbound Voice Agents</span>
             </div>
-          </div>
+            <p className="text-sm mt-1 opacity-90">
+              Handle incoming calls intelligently—24/7
+            </p>
+          </button>
 
-          {/* Visual element */}
-          <div className="relative h-96 hidden lg:flex items-center justify-center">
-            {/* Animated cards */}
-            <div className="absolute inset-0 flex items-center justify-center perspective">
-              {/* Outer glow */}
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-100/40 to-cyan-100/30 rounded-3xl blur-2xl opacity-60"></div>
-
-              {/* Main card */}
-              <div className="relative w-72 h-72 bg-gradient-to-br from-white to-gray-50 border-2 border-gray-200 rounded-2xl p-8 shadow-lg hover:shadow-xl hover:border-cyan-500/50 transition-all duration-300 transform hover:scale-105">
-                <div className="absolute inset-0 bg-gradient-to-br from-cyan-50/40 to-blue-50/40 rounded-2xl"></div>
-
-                <div className="relative h-full flex flex-col justify-between">
-                  <div className="space-y-3">
-                    <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-lg"></div>
-                    <div className="space-y-2">
-                      <div className="h-3 w-32 bg-gray-300 rounded-full"></div>
-                      <div className="h-2 w-24 bg-gray-200 rounded-full"></div>
-                    </div>
-                  </div>
-                  <div className="space-y-2">
-                    <div className="h-2 w-full bg-gray-200 rounded-full"></div>
-                    <div className="h-2 w-4/5 bg-gray-200 rounded-full"></div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Secondary cards */}
-              <div className="absolute top-12 right-12 w-32 h-32 bg-gray-100/60 border-2 border-gray-200 rounded-xl backdrop-blur-sm transform rotate-12 hover:rotate-6 transition-transform duration-300"></div>
-              <div className="absolute bottom-12 left-12 w-32 h-32 bg-gray-100/60 border-2 border-gray-200 rounded-xl backdrop-blur-sm transform -rotate-12 hover:-rotate-6 transition-transform duration-300"></div>
+          <button
+            onClick={() => setActiveTab("outbound")}
+            className={`px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 ${
+              activeTab === "outbound"
+                ? "bg-slate-900 text-white shadow-lg scale-105"
+                : "bg-white text-slate-700 hover:bg-slate-50 shadow"
+            }`}
+          >
+            <div className="flex items-center justify-center gap-2">
+              <PhoneCall className="w-5 h-5" />
+              <span>Outbound Voice Agents</span>
             </div>
-          </div>
+            <p className="text-sm mt-1 opacity-90">
+              Automate outgoing calls naturally
+            </p>
+          </button>
+
+          <button
+            onClick={() => setActiveTab("workflow")}
+            className={`px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 ${
+              activeTab === "workflow"
+                ? "bg-slate-900 text-white shadow-lg scale-105"
+                : "bg-white text-slate-700 hover:bg-slate-50 shadow"
+            }`}
+          >
+            <div className="flex items-center justify-center gap-2">
+              <Workflow className="w-5 h-5" />
+              <span>Workflow Automation</span>
+            </div>
+            <p className="text-sm mt-1 opacity-90">
+              Custom AI for your business
+            </p>
+          </button>
         </div>
 
-        {/* Stats section */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 border-t-2 border-gray-200 pt-16">
-          {[
-            { number: "500+", label: "Projects Delivered" },
-            { number: "98%", label: "Client Satisfaction" },
-            { number: "50+", label: "Team Members" },
-            { number: "10+", label: "Years Experience" },
-          ].map((stat, index) => (
-            <div key={index} className="text-center group">
-              <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform duration-300">
-                {stat.number}
+        {/* Features Grid */}
+        <div
+          className={`grid grid-cols-1 md:grid-cols-2 ${
+            activeTab === "workflow" ? "lg:grid-cols-2" : "lg:grid-cols-4"
+          } gap-6 mb-12`}
+        >
+          {(activeTab === "inbound"
+            ? inboundFeatures
+            : activeTab === "outbound"
+            ? outboundFeatures
+            : workflowFeatures
+          ).map((feature, index) => {
+            const Icon = feature.icon;
+            return (
+              <div
+                key={index}
+                className="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+              >
+                <div className="bg-slate-900 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                  <Icon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-lg font-bold text-slate-900 mb-2">
+                  {feature.title}
+                </h3>
+                <p className="text-slate-600 text-sm leading-relaxed">
+                  {feature.description}
+                </p>
               </div>
-              <p className="text-sm text-gray-600 group-hover:text-gray-900 transition-colors duration-300">
-                {stat.label}
-              </p>
-            </div>
-          ))}
+            );
+          })}
+        </div>
+
+        {/* CTA Button */}
+        <div className="text-center">
+          <button className="bg-slate-900 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-slate-800 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105">
+            {activeTab === "inbound"
+              ? "Discover Inbound AI →"
+              : activeTab === "outbound"
+              ? "Start Outbound Automation →"
+              : "Automate My Business →"}
+          </button>
         </div>
       </div>
-
-      <style jsx>{`
-        @keyframes fade-in {
-          from {
-            opacity: 0;
-            transform: translateY(20px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-
-        .animate-fade-in {
-          animation: fade-in 0.8s ease-out forwards;
-        }
-
-        .delay-700 {
-          animation-delay: 0.7s;
-        }
-      `}</style>
-    </section>
+    </div>
   );
 }
- 

@@ -7,6 +7,7 @@ import HowItWorks from "./components/HowItWorks"
 import Navbar from "./components/Navbar"
 import AnimatedTestimonial from "./components/testimonial"
 import WhatWeDo from "./components/whatWeDo"
+import WhoWeHelpSection from "./components/whoWeHelp"
 import PainPoints from "./components/whyNeed"
 
 function App() {
@@ -16,11 +17,12 @@ function App() {
       <Navbar />
       <Hero />
       <AboutUs />
+      <AnimatedTestimonial />
+      <WhoWeHelpSection />
       <WhatWeDo />
       {/* <PainPoints /> */}
       <HowItWorks />
       <Features />
-      <AnimatedTestimonial />
       {/* <CTASection /> */}
       <Footer />
     </>
