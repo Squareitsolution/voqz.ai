@@ -26,14 +26,14 @@ export default function GetStarted() {
   ];
 
   return (
-    <div className="min-h-screen bg-black relative overflow-hidden">
-      {/* Technical Grid Background */}
+    <div className="min-h-screen bg-slate-950 relative overflow-hidden">
+      {/* Background Grid */}
       <div className="absolute inset-0 opacity-10">
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: `linear-gradient(to right, rgb(255, 255, 255) 2px, transparent 2px),
-                           linear-gradient(to bottom, rgb(255, 255, 255) 2px, transparent 2px)`,
+            backgroundImage: `linear-gradient(to right, rgb(148,163,180) 1px, transparent 1px),
+                             linear-gradient(to bottom, rgb(148,163,184) 1px, transparent 1px)`,
             backgroundSize: "40px 40px",
           }}
         ></div>
@@ -43,8 +43,8 @@ export default function GetStarted() {
         <div className="max-w-6xl w-full">
           {/* Header Section */}
           <div className="text-center mb-5">
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-              How to <span className="text-indigo-400">Get Started</span>
+            <h2 className="text-5xl font-bold text-white mb-6 leading-tight">
+              How to <span className="">Get Started</span>
             </h2>
             <p className="text-gray-400 text-lg sm:text-xl max-w-3xl mx-auto leading-relaxed">
               Begin Your AI Journey in 3 Easy Steps

@@ -63,17 +63,17 @@ const CTASection = () => {
             <div className="absolute inset-0 bg-white/10 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
           </button>
 
-          <button className="group relative px-8 py-4 bg-white/20 backdrop-blur-sm border border-white/30 hover:bg-white/30 text-gray-900 font-bold text-lg rounded-2xl shadow-2xl transition-all duration-300 hover:scale-105 overflow-hidden">
+          {/* <button className="group relative px-8 py-4 bg-white/20 backdrop-blur-sm border border-white/30 hover:bg-white/30 text-gray-900 font-bold text-lg rounded-2xl shadow-2xl transition-all duration-300 hover:scale-105 overflow-hidden">
             <span className="relative z-10">Let's Talk</span>
-          </button>
+          </button> */}
         </div>
 
         {/* Trust Indicators */}
-        <div className="mt-2 animate-fade-in-up opacity-0">
+        {/* <div className="mt-2 animate-fade-in-up opacity-0">
           <p className="text-gray-600 text-sm mb-4">
             Trusted by 10,000+ businesses worldwide
           </p>
-        </div>
+        </div> */}
       </div>
 
       {/* CSS Animations */}

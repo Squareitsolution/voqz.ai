@@ -99,14 +99,14 @@ export default function TestimonialsSection() {
         </div>
 
         {/* Bottom CTA */}
-        <div className="text-center flex flex-col items-center mt-16">
+        {/* <div className="text-center flex flex-col items-center mt-16">
           <p className="text-slate-200 text-lg mb-6">
             Join hundreds of businesses transforming their operations with AI
           </p>
           <button className="bg-slate-900 flex items-center gap-2 cursor-pointer text-white px-10 py-4 rounded-lg font-semibold text-lg hover:bg-slate-800 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 border border-slate-700">
            Get Started Today <ArrowRight className="w-5 h-5 lg:mt-1" />
           </button>
-        </div>
+        </div> */}
       </div>
     </div>
   );

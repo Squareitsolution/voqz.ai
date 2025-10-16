@@ -148,8 +148,20 @@ export default function AIVoiceSolutions() {
   ];
 
   return (
-    <div className="min-h-screen bg-slate-200 py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
+    <div className="min-h-screen relative bg-slate-300 py-12 px-4 sm:px-6 lg:px-8">
+      {/* Background Grid */}
+      <div className="absolute inset-0 opacity-10">
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `linear-gradient(to right, rgb(0, 0, 0) 1px, transparent 1px),
+                           linear-gradient(to bottom, rgb(0, 0, 0) 1px, transparent 1px)`,
+            backgroundSize: "40px 40px",
+          }}
+        ></div>
+      </div>
+
+      <div className="max-w-7xl mx-auto relative">
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
@@ -248,7 +260,7 @@ export default function AIVoiceSolutions() {
         </div>
 
         {/* CTA Button */}
-        <div className="text-center">
+        {/* <div className="text-center">
           <button className="bg-slate-900 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-slate-800 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105">
             {activeTab === "inbound"
               ? "Discover Inbound AI →"
@@ -256,7 +268,7 @@ export default function AIVoiceSolutions() {
               ? "Start Outbound Automation →"
               : "Automate My Business →"}
           </button>
-        </div>
+        </div> */}
       </div>
     </div>
   );

@@ -14,138 +14,109 @@ export default function WhoWeHelpSection() {
     {
       icon: Home,
       title: "Home Services",
-      description: "Roofing, Plumbing, HVAC, Electrical",
-      gradient: "from-blue-500 to-cyan-500",
-      code: "01",
+      description: "Roofing, plumbing, HVAC, and electrical professionals.",
+      color: "from-blue-500 to-cyan-500",
     },
     {
       icon: Scale,
       title: "Law Firms",
-      description: "Migration, Family, Commercial Law",
-      gradient: "from-purple-500 to-indigo-500",
-      code: "02",
+      description: "Family, commercial, and corporate law practices.",
+      color: "from-indigo-500 to-purple-500",
     },
     {
       icon: Heart,
       title: "Health & Wellness",
-      description: "Clinics, Dental, Therapy",
-      gradient: "from-pink-500 to-rose-500",
-      code: "03",
+      description: "Clinics, dental care, therapy, and wellness centers.",
+      color: "from-pink-500 to-rose-500",
     },
     {
       icon: Plane,
       title: "Tourism & Travel",
-      description: "24/7 inquiries and bookings",
-      gradient: "from-orange-500 to-amber-500",
-      code: "04",
+      description: "Tour agencies, hotels, and travel booking platforms.",
+      color: "from-orange-500 to-amber-500",
     },
     {
       icon: Music,
       title: "Entertainment",
-      description: "Event bookings, ticketing & customer service",
-      gradient: "from-violet-500 to-purple-500",
-      code: "05",
+      description: "Event management, bookings, and media production.",
+      color: "from-violet-500 to-purple-600",
     },
     {
       icon: Building2,
       title: "Real Estate",
-      description: "Lead qualification and appointment scheduling",
-      gradient: "from-emerald-500 to-teal-500",
-      code: "06",
+      description: "Agencies, brokers, and property management firms.",
+      color: "from-emerald-500 to-teal-500",
     },
   ];
 
   return (
-    <div className="min-h-screen bg-slate-200 py-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-      {/* Technical Grid Background */}
-      <div className="absolute inset-0 opacity-10">
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage: `linear-gradient(to right, rgb(100, 116, 139) 1px, transparent 1px),
-                           linear-gradient(to bottom, rgb(100, 116, 139) 1px, transparent 1px)`,
-            backgroundSize: "40px 40px",
-          }}
-        ></div>
-      </div>
-
-      <div className="max-w-7xl mx-auto relative z-10">
-        {/* Header */}
+    <section className="relative bg-white py-24 px-6 sm:px-10 lg:px-16 font-sans text-gray-800">
+      <div className="max-w-7xl mx-auto">
+        {/* Section Header */}
         <div className="text-center mb-16">
-          <div className="inline-block mb-4">
-            <span className="text-sm font-mono text-slate-500 bg-slate-300 px-4 py-2 rounded-full border border-slate-400">
-              &lt;INDUSTRIES /&gt;
-            </span>
-          </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 font-mono">
+          <span className="inline-block text-xs uppercase tracking-widest text-blue-600 bg-blue-50 px-4 py-1 rounded-full font-medium">
+            Industries We Serve
+          </span>
+
+          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mt-6 mb-4 leading-tight">
             Who We Help
           </h2>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            Our AI voice solutions are built for businesses of all sizes,
-            including:
+
+          <p className="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">
+            Empowering businesses across industries with smart automation and
+            next-generation AI solutions.
           </p>
         </div>
 
-        {/* Industries Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+        {/* Cards Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {industries.map((industry, index) => {
             const Icon = industry.icon;
             return (
               <div
                 key={index}
-                className="bg-white rounded-lg p-5 shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group border border-slate-300 relative overflow-hidden"
+                className="group relative bg-white border border-gray-100 rounded-2xl p-6 sm:p-7 shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-500 overflow-hidden"
               >
-                {/* Technical Corner Accent */}
-                <div className="absolute top-0 right-0 w-20 h-20 opacity-10">
-                  <div className="absolute top-2 right-2 w-16 h-16 border-t-2 border-r-2 border-slate-400"></div>
-                </div>
-
-                {/* Code Number */}
-                <div className="absolute top-4 right-4 text-6xl font-bold text-slate-200 group-hover:text-slate-300 transition-colors duration-300">
-                  {industry.code}
-                </div>
-
-                {/* Icon with Gradient Background */}
+                {/* Accent gradient overlay */}
                 <div
-                  className={`w-16 h-16 rounded-lg bg-gradient-to-br ${industry.gradient} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 relative z-10 border-2 border-slate-900/10`}
+                  className={`absolute inset-0 bg-gradient-to-br ${industry.color} opacity-0 group-hover:opacity-10 blur-2xl transition-all duration-700`}
+                ></div>
+
+                {/* Icon */}
+                <div
+                  className={`relative w-14 h-14 mb-4 rounded-xl bg-gradient-to-br ${industry.color} flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-500`}
                 >
-                  <Icon className="w-8 h-8 text-white" />
+                  <Icon className="w-7 h-7 text-white" />
                 </div>
 
                 {/* Title */}
-                <h3 className="text-2xl font-bold text-slate-900 mb-3 relative z-10">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
                   {industry.title}
                 </h3>
 
-                {/* Separator Line */}
-                <div className="w-12 h-0.5 bg-gradient-to-r from-slate-400 to-transparent mb-4"></div>
-
                 {/* Description */}
-                <p className="text-slate-600 text-base leading-relaxed relative z-10">
+                <p className="text-gray-600 text-sm leading-relaxed mb-4">
                   {industry.description}
                 </p>
 
-                {/* Hover Arrow */}
-                <div className="mt-6 flex items-center text-slate-900 font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300 relative z-10">
-                  <span className="mr-2 text-sm">[Learn_more]</span>
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                {/* Button */}
+                <div className="flex items-center text-blue-600 text-sm font-medium opacity-0 group-hover:opacity-100 transition-all duration-500">
+                  <span>Learn more</span>
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </div>
-
-                {/* Bottom Border Accent */}
-                <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-slate-400 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
             );
           })}
         </div>
 
-        {/* CTA Section */}
-        <div className="text-center">
-          <button className="bg-slate-900 text-white px-10 cursor-pointer py-4 rounded-lg font-semibold text-lg  hover:bg-slate-800 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 inline-flex items-center gap-2 border-2 border-slate-700">
+        {/* CTA */}
+        <div className="text-center mt-20">
+          <button className="group inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-base rounded-xl font-semibold shadow-md hover:shadow-lg hover:scale-105 hover:from-cyan-500 hover:to-blue-500 transition-all duration-500">
             <span>Find Your Industry</span>
-            <ArrowRight className="w-5 h-5" />
+            <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
           </button>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

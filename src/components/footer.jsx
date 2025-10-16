@@ -125,7 +125,7 @@ const Footer = () => {
             {/* Navigation column */}
             <div className="animate-fade-in-delay">
               <h3 className="text-white font-semibold mb-4 relative">
-                Navigation
+                Quick Links
                 <div className="absolute -bottom-1 left-0 w-8 h-0.5 bg-gradient-to-r from-purple-400 to-transparent animate-expand"></div>
               </h3>
               <ul className="space-y-3">

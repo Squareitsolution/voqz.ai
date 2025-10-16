@@ -27,18 +27,19 @@ export default function BusinessNeed() {
   ];
 
   return (
-    <div className="min-h-screen bg-black relative overflow-hidden">
-      {/* Technical Grid Background */}
+    <div className="min-h-screen bg-slate-950 relative overflow-hidden">
+      {/* Background Grid */}
       <div className="absolute inset-0 opacity-10">
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: `linear-gradient(to right, rgb(255, 255, 255) 2px, transparent 2px),
-                           linear-gradient(to bottom, rgb(255, 255, 255) 2px, transparent 2px)`,
+            backgroundImage: `linear-gradient(to right, rgb(148,163,180) 1px, transparent 1px),
+                             linear-gradient(to bottom, rgb(148,163,184) 1px, transparent 1px)`,
             backgroundSize: "40px 40px",
           }}
         ></div>
       </div>
+
       {/* Subtle Background Pattern */}
       {/* <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:64px_64px]"></div> */}
 
@@ -48,8 +49,6 @@ export default function BusinessNeed() {
           <div className=" shadow-2xl p-8 sm:p-10 lg:p-12">
             {/* Header Section */}
             <div className="text-center mb-12">
-              
-
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-2 leading-tight">
                 <span className="text-white">Why Businesses Need </span>
                 <span className="text-gray-300">AI Automation</span>

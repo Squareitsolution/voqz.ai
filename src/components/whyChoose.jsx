@@ -30,22 +30,24 @@ export default function WhyChoose() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-300 relative overflow-hidden">
-      {/* Animated Grid Background */}
-      <div
-        className="absolute inset-0 opacity-40"
-        style={{
-          backgroundImage: `linear-gradient(to right, rgba(0,0,0,0.1) 1px, transparent 1px),
-                            linear-gradient(to bottom, rgba(0,0,0,0.1) 1px, transparent 1px)`,
-          backgroundSize: "60px 60px",
-        }}
-      ></div>
+    <div className="h-[90vh] bg-gray-300 relative overflow-hidden">
+      {/* Technical Grid Background */}
+      <div className="absolute inset-0 opacity-10">
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `linear-gradient(to right, rgb(0, 0, 0) 1px, transparent 1px),
+                           linear-gradient(to bottom, rgb(0, 0, 0) 1px, transparent 1px)`,
+            backgroundSize: "40px 40px",
+          }}
+        ></div>
+      </div>
 
       {/* Diagonal Accent Lines */}
       <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-bl from-indigo-100/30 to-transparent"></div>
       <div className="absolute bottom-0 left-0 w-1/4 h-1/2 bg-gradient-to-tr from-indigo-50/40 to-transparent"></div>
 
-      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen py-16 px-4 sm:px-6 lg:px-12">
+      <div className="relative z-10 flex flex-col items-center justify-center py-16 px-4 sm:px-6 lg:px-12">
         <div className="max-w-7xl w-full">
           {/* Header Section */}
           <div className="text-center mb-5">
