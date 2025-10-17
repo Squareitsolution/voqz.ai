@@ -7,22 +7,29 @@ import AboutUs from "./pages/about"
 import ServicesPage from "./pages/services"
 import FAQ from "./pages/faq"
 import Contact from "./pages/contact"
+import { FaWhatsapp } from "react-icons/fa";
+import { PhoneCall } from "lucide-react";
+import ScrollToTopButton from "./components/ScrollToTopButton"
+import FloatingButtons from "./components/FloatingButtons"
 
 function App() {
 
   return (
     <>
-    <Router>
-    <Navbar />
-      <Routes>
-        <Route path="/" element={<Home /> } />
-        <Route path="/about" element={<AboutUs /> } />
-        <Route path="/services" element={<ServicesPage /> } />
-        <Route path="/faqs" element={<FAQ /> } />
-        <Route path="/contact" element={<Contact /> } />
-      </Routes>
-        <Footer />
-    </Router>
+      <FloatingButtons />
+
+      <Router>
+        <ScrollToTopButton />
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home /> } />
+          <Route path="/about" element={<AboutUs /> } />
+          <Route path="/services" element={<ServicesPage /> } />
+          <Route path="/faqs" element={<FAQ /> } />
+          <Route path="/contact" element={<Contact /> } />
+        </Routes>
+          <Footer />
+      </Router>
     
       
     </>

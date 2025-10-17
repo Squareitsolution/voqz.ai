@@ -65,6 +65,31 @@ export default function FAQ() {
         ></div>
       </div>
 
+
+      <section
+        className="relative w-full h-[50vh] sm:h-[60vh] bg-cover bg-center flex items-center justify-center"
+        style={{
+          backgroundImage:
+            "url('https://images.unsplash.com/photo-1556761175-129418cb2dfe?w=1600&h=900&fit=crop')",
+        }}
+      >
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/60" />
+
+        {/* Banner Text */}
+        <div className="relative text-center z-10 px-4">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
+            FAQs 
+          </h1>
+          <p className="text-gray-300 text-sm md:text-base">
+            <span className="text-white/90 hover:text-teal-400 transition-colors cursor-pointer">
+              Home
+            </span>{" "}
+            <span className="mx-2 text-teal-400">›</span> FAQs
+          </p>
+        </div>
+      </section>
+
       {/* Animated Gradient Orbs */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-teal-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-slate-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse delay-700"></div>
