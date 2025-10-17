@@ -43,7 +43,7 @@ const CTASection = () => {
       <div className="relative text-center max-w-4xl z-20">
         {/* Main Headline */}
         <div className="mb-2">
-          <h2 className="text-4xl md:text-6xl lg:text-6xl font-black text-gray-900 mb-1 animate-slide-up leading-tight">
+          <h2 className="text-4xl md:text-5xl font-bold mb-1 animate-slide-up leading-tight">
             Let AI handle the calls.
           </h2>
           <h4 className="text-xl md:text-6xl lg:text-2xl font-black text-gray-700 animate-slide-up leading-tight">

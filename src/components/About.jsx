@@ -20,7 +20,7 @@ import {
   Bot,
 } from "lucide-react";
 
-export default function AIVoiceSolutions() {
+export default function About() {
   const [activeTab, setActiveTab] = useState("inbound");
 
   const inboundFeatures = [

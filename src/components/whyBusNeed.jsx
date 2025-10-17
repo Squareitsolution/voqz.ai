@@ -49,7 +49,7 @@ export default function BusinessNeed() {
           <div className=" shadow-2xl p-8 sm:p-10 lg:p-12">
             {/* Header Section */}
             <div className="text-center mb-12">
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-2 leading-tight">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold mb-2 leading-tight">
                 <span className="text-white">Why Businesses Need </span>
                 <span className="text-gray-300">AI Automation</span>
               </h1>

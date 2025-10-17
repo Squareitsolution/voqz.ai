@@ -1,32 +1,30 @@
-import AboutUs from "./components/About"
-import CTASection from "./components/CTA"
-import Features from "./components/features"
+
 import Footer from "./components/footer"
-import GetStarted from "./components/getStarted"
-import Hero from "./components/Hero"
-import HowItWorks from "./components/HowItWorks"
 import Navbar from "./components/Navbar"
-import AnimatedTestimonial from "./components/testimonial"
-import WhatWeDo from "./components/whatWeDo"
-import WhoWeHelpSection from "./components/whoWeHelp"
-import BusinessNeed from "./components/whyBusNeed"
-import WhyChoose from "./components/whyChoose"
-import PainPoints from "./components/whyNeed"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import Home from "./pages/home"
+import AboutUs from "./pages/about"
+import ServicesPage from "./pages/services"
+import FAQ from "./pages/faq"
+import Contact from "./pages/contact"
 
 function App() {
 
   return (
     <>
-      <Navbar />
-      <Hero />
-      <AboutUs />
-      <AnimatedTestimonial />
-      <WhoWeHelpSection />
-      <BusinessNeed />
-      <WhyChoose />
-      <GetStarted />
-      <CTASection />
-      <Footer />
+    <Router>
+    <Navbar />
+      <Routes>
+        <Route path="/" element={<Home /> } />
+        <Route path="/about" element={<AboutUs /> } />
+        <Route path="/services" element={<ServicesPage /> } />
+        <Route path="/faqs" element={<FAQ /> } />
+        <Route path="/contact" element={<Contact /> } />
+      </Routes>
+        <Footer />
+    </Router>
+    
+      
     </>
   )
 }

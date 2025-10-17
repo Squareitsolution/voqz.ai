@@ -42,7 +42,7 @@ export default function TestimonialsSection() {
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-4xl md:text-5xl font-semibold mb-4">
             Trusted by Businesses Worldwide
           </h2>
           <div className="flex items-center justify-center gap-1 mt-6">

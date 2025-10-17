@@ -1,12 +1,22 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  // ✅ Define links in an array
+  const navLinks = [
+    { name: "Home", path: "/" },
+    { name: "About", path: "/about" },
+    { name: "Services", path: "/services" },
+    { name: "FAQs", path: "/faqs" },
+    { name: "Contact", path: "/contact" },
+  ];
+
   return (
     <nav className="fixed inset-x-0 top-0 z-50 w-full">
-      {/* Main bar */}
-      <div 
+      {/* Main Bar */}
+      <div
         className={[
           "flex items-center justify-between",
           "border-b border-gray-400/20",
@@ -23,18 +33,21 @@ const Navbar = () => {
           </h2>
         </div>
 
-        {/* Desktop nav */}
+        {/* Desktop Nav */}
         <ul className="hidden lg:flex gap-7 text-white/90">
-          {["Home", "About", "Services", "FAQs", "Contact"].map((item) => (
-            <li key={item}>
-              <a href="#" className="transition-colors hover:text-white">
-                {item}
-              </a>
+          {navLinks.map(({ name, path }) => (
+            <li key={name}>
+              <Link
+                to={path}
+                className="transition-colors hover:text-white"
+              >
+                {name}
+              </Link>
             </li>
           ))}
         </ul>
 
-        {/* CTA */}
+        {/* CTA Button */}
         <div className="hidden lg:block">
           <a
             href="tel:+918877665544"
@@ -44,14 +57,14 @@ const Navbar = () => {
           </a>
         </div>
 
-        {/* Mobile toggle */}
+        {/* Mobile Toggle */}
         <button
           aria-label="Toggle menu"
           aria-expanded={isOpen}
           onClick={() => setIsOpen((v) => !v)}
-          className="lg:hidden grid place-items-center cursor-pointer  rounded-xl ring-1 ring-gray-400/10 bg-gray-800/10 hover:bg-gray-700/10 text-white"
+          className="lg:hidden grid place-items-center cursor-pointer rounded-xl ring-1 ring-gray-400/10 bg-gray-800/10 hover:bg-gray-700/10 text-white p-2"
         >
-          {/* Hamburger icon */}
+          {/* Hamburger Icon */}
           <span
             className={[
               "block h-0.5 w-5 rounded-full bg-white transition-all",
@@ -73,7 +86,7 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile sheet */}
+      {/* Mobile Sheet */}
       {isOpen && (
         <div
           className={[
@@ -85,15 +98,15 @@ const Navbar = () => {
           ].join(" ")}
         >
           <ul className="flex flex-col gap-4">
-            {["Home", "About", "Services", "FAQs", "Contact"].map((item) => (
-              <li key={item}>
-                <a
-                  href="#"
+            {navLinks.map(({ name, path }) => (
+              <li key={name}>
+                <Link
+                  to={path}
                   onClick={() => setIsOpen(false)}
                   className="block w-full rounded-lg px-2 py-2 hover:bg-gray-700/40 transition-colors"
                 >
-                  {item}
-                </a>
+                  {name}
+                </Link>
               </li>
             ))}
           </ul>
