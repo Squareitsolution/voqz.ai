@@ -11,6 +11,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import { PhoneCall } from "lucide-react";
 import ScrollToTopButton from "./components/ScrollToTopButton"
 import FloatingButtons from "./components/FloatingButtons"
+import ScrollToTop from "./components/scrollToTop"
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
       <FloatingButtons />
 
       <Router>
+        <ScrollToTop />
         <ScrollToTopButton />
         <Navbar />
         <Routes>

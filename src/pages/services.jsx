@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import {
   Phone,
   Clock,
@@ -27,25 +26,10 @@ import {
   CheckCircle2,
   Sparkles,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function ServicesPage() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    company: "",
-    message: "",
-  });
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form submitted:", formData);
-    // Handle form submission
-  };
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
 
   const inboundFeatures = [
     { icon: <Clock className="w-5 h-5" />, title: "Always Available", description: "Round-the-clock coverage so you never miss a call." },
@@ -95,8 +79,8 @@ export default function ServicesPage() {
       </div>
 
       <div className="relative z-10">
-        {/* Hero Banner */}
-        <section
+        {/* ✅ Tech Banner Section */}
+      <section
         className="relative w-full h-[50vh] sm:h-[60vh] bg-cover bg-center flex items-center justify-center"
         style={{
           backgroundImage:
@@ -108,30 +92,19 @@ export default function ServicesPage() {
 
         {/* Banner Text */}
         <div className="relative text-center z-10 px-4">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-teal-500/10 border border-teal-500/20 rounded-full mb-6">
-              <Sparkles className="w-4 h-4 text-teal-400" />
-              <span className="text-teal-400 text-sm font-medium">AI-Powered Voice Solutions</span>
-            </div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-              AI-Powered Voice Interaction <br />
-              <span className="bg-gradient-to-r from-teal-400 to-cyan-400 bg-clip-text text-transparent">
-                That Feels Human
-              </span>
-            </h1>
-            <p className="text-gray-400 text-lg md:text-xl mb-10 max-w-3xl mx-auto">
-              More than just answering calls—VOQZ delivers real conversations that understand, engage, and convert.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-teal-500 to-cyan-500 text-white rounded-lg font-semibold text-base shadow-xl hover:shadow-2xl hover:from-teal-600 hover:to-cyan-600 transform hover:scale-105 transition-all duration-300">
-                <span>Talk to an AI Voice Agent Today</span>
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
-              </button>
-              <button className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 border border-white/20 text-white rounded-lg font-semibold text-base hover:bg-white/20 transition-all duration-300">
-                <span>Check Demo</span>
-              </button>
-            </div>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
+            Serv<span className="text-teal-400">ices</span>
+          </h1>
+          <p className="text-gray-300 text-sm md:text-base">
+            <span className="text-white/90 hover:text-teal-400 transition-colors cursor-pointer">
+              Home
+            </span>{" "}
+            <span className="mx-2 text-teal-400">›</span>Services
+          </p>
         </div>
       </section>
+        {/* Hero Banner */}
+       
 
         {/* Inbound Voice Agents */}
         <section className="py-16 px-4 sm:px-6 lg:px-12">
@@ -161,7 +134,7 @@ export default function ServicesPage() {
               ))}
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            {/* <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-teal-500 to-cyan-500 text-white rounded-lg font-semibold text-base shadow-xl hover:shadow-2xl hover:from-teal-600 hover:to-cyan-600 transform hover:scale-105 transition-all duration-300">
                 <span>Start a Free Trial Today</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
@@ -169,7 +142,7 @@ export default function ServicesPage() {
               <button className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 border border-white/20 text-white rounded-lg font-semibold text-base hover:bg-white/20 transition-all duration-300">
                 <span>Let's Connect</span>
               </button>
-            </div>
+            </div> */}
           </div>
         </section>
 
@@ -249,12 +222,12 @@ export default function ServicesPage() {
             </div>
 
             {/* CTA Button */}
-            <div className="text-center">
+            {/* <div className="text-center">
               <button className="group inline-flex items-center justify-center gap-2 px-10 py-4 bg-gradient-to-r from-teal-500 to-cyan-500 text-white rounded-full font-semibold text-base shadow-xl hover:shadow-2xl hover:from-teal-600 hover:to-cyan-600 transform hover:scale-105 transition-all duration-300">
                 <span>Start Your Journey Now</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
               </button>
-            </div>
+            </div> */}
 
             {/* Additional Features Grid */}
             <div className="mt-20 pt-16 border-t border-gray-800">
@@ -306,12 +279,12 @@ export default function ServicesPage() {
               ))}
             </div>
 
-            <div className="text-center">
+            {/* <div className="text-center">
               <button className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-teal-500 to-cyan-500 text-white rounded-lg font-semibold text-base shadow-xl hover:shadow-2xl hover:from-teal-600 hover:to-cyan-600 transform hover:scale-105 transition-all duration-300">
                 <span>Explore AI for Your Industry</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
               </button>
-            </div>
+            </div> */}
           </div>
         </section>
 
@@ -341,25 +314,25 @@ export default function ServicesPage() {
               ))}
             </div>
 
-            <div className="text-center">
+            {/* <div className="text-center">
               <button className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-teal-500 to-cyan-500 text-white rounded-lg font-semibold text-base shadow-xl hover:shadow-2xl hover:from-teal-600 hover:to-cyan-600 transform hover:scale-105 transition-all duration-300">
                 <span>Get Started Today</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
               </button>
-            </div>
+            </div> */}
           </div>
         </section>
 
         {/* Inquiry Form */}
-        <section className="py-16 px-4 sm:px-6 lg:px-12">
+        <section className=" relative py-16 px-4 sm:px-6 lg:px-12">
           <div className="max-w-4xl mx-auto">
-            <div className="bg-gradient-to-br from-teal-500/10 to-cyan-500/10 rounded-2xl p-8 md:p-12 border border-teal-500/20 shadow-2xl">
+            <div className="bg-gradient-to-br relative from-teal-500/10 to-cyan-500/10 rounded-2xl p-8 md:p-12 border border-teal-500/20 shadow-2xl">
               <div className="text-center mb-8">
                 <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
                 <p className="text-gray-300 text-lg">Fill out the form below and our team will reach out to you shortly.</p>
               </div>
 
-              <form onSubmit={handleSubmit} className="space-y-6">
+              {/* <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-white text-sm font-medium mb-2">Full Name *</label>
@@ -434,7 +407,17 @@ export default function ServicesPage() {
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
                   </button>
                 </div>
-              </form>
+              </form> */}
+              <div className="flex justify-center">
+
+                  <Link to="/contact"
+                    type="submit"
+                    className="group cursor-pointer inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-teal-500 to-cyan-500 text-white rounded-lg font-semibold text-base shadow-xl hover:shadow-2xl hover:from-teal-600 hover:to-cyan-600 transform hover:scale-105 transition-all duration-300"
+                    >
+                    <span>Click here</span>
+                    <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
+                  </Link>
+              </div>
             </div>
           </div>
         </section>

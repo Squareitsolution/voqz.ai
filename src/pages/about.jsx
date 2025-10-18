@@ -10,6 +10,7 @@ import {
   Heart,
   ArrowRight,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function AboutUs() {
   const goals = [
@@ -235,7 +236,7 @@ export default function AboutUs() {
       </section>
 
       {/* 🌟 CTA Section */}
-      <section className="py-20 text-center bg-gradient-to-r from-teal-600 to-cyan-500 relative z-10">
+      <section className="py-20 text-center bg-gradient-to-r from-teal-600 flex flex-col to-cyan-500 relative z-10">
         <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
           Let’s Build the Future of Voice AI Together
         </h2>
@@ -243,9 +244,9 @@ export default function AboutUs() {
           Partner with VOQZ to revolutionize customer engagement through
           cutting-edge Voice AI solutions.
         </p>
-        <button className="px-8 py-3 bg-white text-teal-600 font-semibold rounded-full flex items-center gap-2 mx-auto hover:bg-gray-100 transition-all">
+        <Link to="/contact" className="px-8 py-3 bg-white text-teal-600 font-semibold rounded-full flex justify-center gap-2 mx-auto hover:bg-gray-100 transition-all">
           Get Started <ArrowRight className="w-5 h-5" />
-        </button>
+        </Link>
       </section>
     </div>
   );

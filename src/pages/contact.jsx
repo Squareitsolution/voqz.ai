@@ -82,10 +82,10 @@ export default function Contact() {
           <p className="text-slate-300 text-base sm:text-lg lg:text-xl max-w-3xl mx-auto mb-8 px-4">
             Whether you're ready to launch AI voice agents, curious about automation possibilities, or just exploring—our team is here to help.
           </p>
-          <button className="bg-gradient-to-r from-teal-600 to-teal-500 text-white font-bold px-8 sm:px-10 py-3 sm:py-4 rounded-full text-base sm:text-lg hover:from-teal-500 hover:to-teal-400 transition-all duration-300 hover:scale-105 hover:shadow-xl inline-flex items-center gap-2">
+          {/* <button className="bg-gradient-to-r from-teal-600 to-teal-500 text-white font-bold px-8 sm:px-10 py-3 sm:py-4 rounded-full text-base sm:text-lg hover:from-teal-500 hover:to-teal-400 transition-all duration-300 hover:scale-105 hover:shadow-xl inline-flex items-center gap-2">
             Book a Free Consultation
             <ArrowRight className="w-5 h-5" />
-          </button>
+          </button> */}
         </div>
 
         <div className="grid lg:grid-cols-3 gap-8 lg:gap-12">
@@ -256,7 +256,7 @@ export default function Contact() {
         </div>
 
         {/* Bottom CTA */}
-        <div className="mt-12 sm:mt-16 bg-gradient-to-r from-teal-600 to-teal-500 rounded-2xl p-8 sm:p-12 text-center shadow-2xl border border-teal-400/20">
+        {/* <div className="mt-12 sm:mt-16 bg-gradient-to-r from-teal-600 to-teal-500 rounded-2xl p-8 sm:p-12 text-center shadow-2xl border border-teal-400/20">
           <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4">
             Ready to Get Started?
           </h3>
@@ -267,7 +267,7 @@ export default function Contact() {
             Schedule Free Demo
             <ArrowRight className="w-5 h-5" />
           </button>
-        </div>
+        </div> */}
       </div>
     </div>
   );

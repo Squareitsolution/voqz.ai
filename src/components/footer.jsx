@@ -10,6 +10,7 @@ import {
   X,
 } from "lucide-react";
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -123,31 +124,37 @@ const Footer = () => {
             </div>
 
             {/* Navigation column */}
-            <div className="animate-fade-in-delay">
-              <h3 className="text-white font-semibold mb-4 relative">
-                Quick Links
-                <div className="absolute -bottom-1 left-0 w-8 h-0.5 bg-gradient-to-r from-purple-400 to-transparent animate-expand"></div>
-              </h3>
-              <ul className="space-y-3">
-                {["Home", "About", "Services", "FAQs", "Contact"].map(
-                  (item, index) => (
-                    <li
-                      key={item}
-                      className="animate-slide-in"
-                      style={{ animationDelay: `${0.1 * index}s` }}
-                    >
-                      <a
-                        href="#"
-                        className="text-gray-300 hover:text-white transition-all duration-300 text-sm hover:translate-x-2 inline-block relative group"
-                      >
-                        <span className="relative z-10">{item}</span>
-                        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 rounded"></div>
-                      </a>
-                    </li>
-                  )
-                )}
-              </ul>
-            </div>
+<div className="animate-fade-in-delay">
+  <h3 className="text-white font-semibold mb-4 relative">
+    Quick Links
+    <div className="absolute -bottom-1 left-0 w-8 h-0.5 bg-gradient-to-r from-purple-400 to-transparent animate-expand"></div>
+  </h3>
+  <ul className="space-y-3">
+    {[
+      { name: "Home", path: "/" },
+      { name: "About", path: "/about" },
+      { name: "Services", path: "/services" },
+      { name: "FAQs", path: "/faqs" },
+      { name: "Contact", path: "/contact" },
+    ].map((item, index) => (
+      <li
+        key={item.name}
+        className="animate-slide-in"
+        style={{ animationDelay: `${0.1 * index}s` }}
+      >
+        <Link
+          to={item.path}
+          className="text-gray-300 hover:text-white transition-all duration-300 text-sm hover:translate-x-2 inline-block relative group"
+        >
+          <span className="relative z-10">{item.name}</span>
+          <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 rounded"></div>
+        </Link>
+      </li>
+    ))}
+  </ul>
+</div>
+
+            
 
             {/* Services column */}
             <div className="animate-fade-in-delay-2">
@@ -168,13 +175,13 @@ const Footer = () => {
                     className="animate-slide-in"
                     style={{ animationDelay: `${0.2 + 0.1 * index}s` }}
                   >
-                    <a
-                      href="#"
+                    <Link
+                      to="/services"
                       className="text-gray-300 hover:text-white transition-all duration-300 text-sm hover:translate-x-2 inline-block relative group"
                     >
                       <span className="relative z-10">{service}</span>
                       <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 rounded"></div>
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const CTASection = () => {
   return (
@@ -58,10 +59,10 @@ const CTASection = () => {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6 animate-fade-in-up opacity-0">
-          <button className="group relative px-8 py-4 bg-gray-900 hover:bg-gray-800 text-white font-bold text-lg rounded-2xl shadow-2xl transition-all duration-300 hover:scale-105 hover:shadow-gray-800/25 overflow-hidden">
+          <Link to="/contact" className="group relative px-8 py-4 bg-gray-900 hover:bg-gray-800 text-white font-bold text-lg rounded-2xl shadow-2xl transition-all duration-300 hover:scale-105 hover:shadow-gray-800/25 overflow-hidden">
             <span className="relative z-10">Book a Demo</span>
             <div className="absolute inset-0 bg-white/10 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
-          </button>
+          </Link>
 
           {/* <button className="group relative px-8 py-4 bg-white/20 backdrop-blur-sm border border-white/30 hover:bg-white/30 text-gray-900 font-bold text-lg rounded-2xl shadow-2xl transition-all duration-300 hover:scale-105 overflow-hidden">
             <span className="relative z-10">Let's Talk</span>

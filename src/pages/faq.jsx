@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function FAQ() {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -152,9 +153,9 @@ export default function FAQ() {
           <p className="text-teal-50 mb-6 sm:mb-8 text-base sm:text-lg max-w-xl mx-auto">
             Start automating your customer communication with AI-powered voice agents today
           </p>
-          <button className="bg-white text-teal-600 font-bold px-8 sm:px-10 py-3 sm:py-4 rounded-full text-base sm:text-lg hover:bg-slate-100 transition-all duration-300 hover:scale-105 hover:shadow-xl">
+          <Link to="/contact" className="bg-white text-teal-600 font-bold px-8 sm:px-10 py-3 sm:py-4 rounded-full text-base sm:text-lg hover:bg-slate-100 transition-all duration-300 hover:scale-105 hover:shadow-xl">
             Book Free Consultation
-          </button>
+          </Link>
         </div>
       </div>
     </div>

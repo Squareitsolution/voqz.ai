@@ -180,12 +180,12 @@ export default function GetStarted() {
           </div>
 
           {/* CTA Button */}
-          <div className="mt-16 text-center">
+          {/* <div className="mt-16 text-center">
             <button className="group inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-teal-500 to-teal-600 text-white rounded-lg font-semibold text-base shadow-xl hover:shadow-2xl hover:from-teal-600 hover:to-teal-700 transform hover:scale-105 transition-all duration-300">
               <span>Start Your Journey Now</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
             </button>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
