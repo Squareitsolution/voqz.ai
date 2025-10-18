@@ -105,8 +105,8 @@ export default function AboutUs() {
       {/* 🌟 About Overview Section (Newly Added) */}
       <section className="py-16 px-4 sm:px-6 lg:px-12 text-center relative z-10">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Who We Are
+          <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
+            About Us
           </h2>
           <p className="text-gray-300 text-lg leading-relaxed max-w-2xl mx-auto">
             At <span className="text-teal-400 font-semibold">VOQZ</span>, we are
