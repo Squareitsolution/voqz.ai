@@ -1,31 +1,66 @@
-import React, { useState } from 'react';
-import { Mail, Phone, MapPin, User, Building2, MessageSquare, Send, ArrowRight, Linkedin, Twitter, Facebook, Instagram } from 'lucide-react';
+import React, { useState } from "react";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  User,
+  Building2,
+  MessageSquare,
+  Send,
+  Linkedin,
+  Twitter,
+  Facebook,
+  Instagram,
+} from "lucide-react";
+import { database } from "../../firebase";
+import { ref, push, set } from "firebase/database";
+import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 export default function Contact() {
+  const navigate = useNavigate();
+
   const [formData, setFormData] = useState({
-    fullName: '',
-    email: '',
-    company: '',
-    message: ''
+    name: "",
+    email: "",
+    company: "",
+    message: "",
   });
 
   const handleChange = (e) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    alert('Message sent successfully!');
-    setFormData({
-      fullName: '',
-      email: '',
-      company: '',
-      message: ''
-    });
+
+    try {
+      const inquiriesRef = ref(database, "inquiries");
+      const newInquiryRef = push(inquiriesRef);
+
+      await set(newInquiryRef, {
+        name: formData.name,
+        email: formData.email,
+        company: formData.company,
+        message: formData.message,
+        timestamp: new Date().toISOString(),
+      });
+
+      setFormData({
+        name: "",
+        email: "",
+        company: "",
+        message: "",
+      });
+
+      navigate("/thanks");
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      toast.error("❌ Failed to send message. Please try again later.");
+    }
   };
 
   return (
@@ -80,12 +115,10 @@ export default function Contact() {
             </span>
           </h1>
           <p className="text-slate-300 text-base sm:text-lg lg:text-xl max-w-3xl mx-auto mb-8 px-4">
-            Whether you're ready to launch AI voice agents, curious about automation possibilities, or just exploring—our team is here to help.
+            Whether you're ready to launch AI voice agents, curious about
+            automation possibilities, or just exploring—our team is here to
+            help.
           </p>
-          {/* <button className="bg-gradient-to-r from-teal-600 to-teal-500 text-white font-bold px-8 sm:px-10 py-3 sm:py-4 rounded-full text-base sm:text-lg hover:from-teal-500 hover:to-teal-400 transition-all duration-300 hover:scale-105 hover:shadow-xl inline-flex items-center gap-2">
-            Book a Free Consultation
-            <ArrowRight className="w-5 h-5" />
-          </button> */}
         </div>
 
         <div className="grid lg:grid-cols-3 gap-8 lg:gap-12">
@@ -96,7 +129,7 @@ export default function Contact() {
               <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6 sm:mb-8">
                 Reach Us Directly
               </h2>
-              
+
               <div className="space-y-6">
                 {/* Email */}
                 <div className="flex items-start gap-4 group cursor-pointer">
@@ -105,7 +138,10 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="text-slate-400 text-sm mb-1">Email</p>
-                    <a href="mailto:info@voqz.ai" className="text-white font-semibold hover:text-teal-400 transition-colors">
+                    <a
+                      href="mailto:info@voqz.ai"
+                      className="text-white font-semibold hover:text-teal-400 transition-colors"
+                    >
                       info@voqz.ai
                     </a>
                   </div>
@@ -118,7 +154,10 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="text-slate-400 text-sm mb-1">Phone</p>
-                    <a href="tel:+91XXXXXXXXXX" className="text-white font-semibold hover:text-teal-400 transition-colors">
+                    <a
+                      href="tel:+91XXXXXXXXXX"
+                      className="text-white font-semibold hover:text-teal-400 transition-colors"
+                    >
                       +91-XXXXXXXXXX
                     </a>
                   </div>
@@ -131,9 +170,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="text-slate-400 text-sm mb-1">Office</p>
-                    <p className="text-white font-semibold">
-                      Global Remote Team
-                    </p>
+                    <p className="text-white font-semibold">Global Remote Team</p>
                   </div>
                 </div>
               </div>
@@ -143,16 +180,28 @@ export default function Contact() {
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 sm:p-8">
               <h3 className="text-xl font-bold text-white mb-4">Follow Us</h3>
               <div className="flex gap-3">
-                <a href="#" className="w-12 h-12 bg-teal-500/10 rounded-xl flex items-center justify-center hover:bg-teal-500 hover:scale-110 transition-all group">
+                <a
+                  href="#"
+                  className="w-12 h-12 bg-teal-500/10 rounded-xl flex items-center justify-center hover:bg-teal-500 hover:scale-110 transition-all group"
+                >
                   <Linkedin className="w-5 h-5 text-teal-400 group-hover:text-white" />
                 </a>
-                <a href="#" className="w-12 h-12 bg-teal-500/10 rounded-xl flex items-center justify-center hover:bg-teal-500 hover:scale-110 transition-all group">
+                <a
+                  href="#"
+                  className="w-12 h-12 bg-teal-500/10 rounded-xl flex items-center justify-center hover:bg-teal-500 hover:scale-110 transition-all group"
+                >
                   <Twitter className="w-5 h-5 text-teal-400 group-hover:text-white" />
                 </a>
-                <a href="#" className="w-12 h-12 bg-teal-500/10 rounded-xl flex items-center justify-center hover:bg-teal-500 hover:scale-110 transition-all group">
+                <a
+                  href="#"
+                  className="w-12 h-12 bg-teal-500/10 rounded-xl flex items-center justify-center hover:bg-teal-500 hover:scale-110 transition-all group"
+                >
                   <Facebook className="w-5 h-5 text-teal-400 group-hover:text-white" />
                 </a>
-                <a href="#" className="w-12 h-12 bg-teal-500/10 rounded-xl flex items-center justify-center hover:bg-teal-500 hover:scale-110 transition-all group">
+                <a
+                  href="#"
+                  className="w-12 h-12 bg-teal-500/10 rounded-xl flex items-center justify-center hover:bg-teal-500 hover:scale-110 transition-all group"
+                >
                   <Instagram className="w-5 h-5 text-teal-400 group-hover:text-white" />
                 </a>
               </div>
@@ -166,10 +215,11 @@ export default function Contact() {
                 Send Us a Message
               </h2>
               <p className="text-slate-300 mb-8">
-                Have a question or project idea? Fill out the form and we'll get back to you within 24 hours.
+                Have a question or project idea? Fill out the form and we'll get
+                back to you within 24 hours.
               </p>
 
-              <div className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Full Name */}
                 <div>
                   <label className="block text-white font-semibold mb-2 text-sm sm:text-base">
@@ -179,11 +229,12 @@ export default function Contact() {
                     <User className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-slate-400 pointer-events-none" />
                     <input
                       type="text"
-                      name="fullName"
-                      value={formData.fullName}
+                      name="name"
+                      value={formData.name}
                       onChange={handleChange}
                       placeholder="Enter your full name"
                       className="w-full bg-white/5 border border-white/10 rounded-xl px-12 py-3 sm:py-4 text-white placeholder-slate-500 focus:outline-none focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20 transition-all"
+                      required
                     />
                   </div>
                 </div>
@@ -202,14 +253,18 @@ export default function Contact() {
                       onChange={handleChange}
                       placeholder="Enter your email address"
                       className="w-full bg-white/5 border border-white/10 rounded-xl px-12 py-3 sm:py-4 text-white placeholder-slate-500 focus:outline-none focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20 transition-all"
+                      required
                     />
                   </div>
                 </div>
 
-                {/* Company Name */}
+                {/* Company */}
                 <div>
                   <label className="block text-white font-semibold mb-2 text-sm sm:text-base">
-                    Company Name <span className="text-slate-400 font-normal">(Optional)</span>
+                    Company Name{" "}
+                    <span className="text-slate-400 font-normal">
+                      (Optional)
+                    </span>
                   </label>
                   <div className="relative">
                     <Building2 className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-slate-400 pointer-events-none" />
@@ -238,36 +293,23 @@ export default function Contact() {
                       rows="5"
                       placeholder="Tell us about your project or question..."
                       className="w-full bg-white/5 border border-white/10 rounded-xl px-12 py-4 text-white placeholder-slate-500 focus:outline-none focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20 transition-all resize-none"
+                      
                     ></textarea>
                   </div>
                 </div>
 
                 {/* Submit Button */}
                 <button
-                  onClick={handleSubmit}
+                  type="submit"
                   className="w-full bg-gradient-to-r from-teal-600 to-teal-500 text-white font-bold px-8 py-4 rounded-xl text-base sm:text-lg hover:from-teal-500 hover:to-teal-400 transition-all duration-300 hover:scale-105 hover:shadow-xl flex items-center justify-center gap-2"
                 >
                   <Send className="w-5 h-5" />
                   Send Message
                 </button>
-              </div>
+              </form>
             </div>
           </div>
         </div>
-
-        {/* Bottom CTA */}
-        {/* <div className="mt-12 sm:mt-16 bg-gradient-to-r from-teal-600 to-teal-500 rounded-2xl p-8 sm:p-12 text-center shadow-2xl border border-teal-400/20">
-          <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4">
-            Ready to Get Started?
-          </h3>
-          <p className="text-teal-50 mb-6 text-base sm:text-lg max-w-2xl mx-auto">
-            Schedule a free consultation and discover how VOQZ AI can revolutionize your customer communication
-          </p>
-          <button className="bg-white text-teal-600 font-bold px-8 sm:px-10 py-3 sm:py-4 rounded-full text-base sm:text-lg hover:bg-slate-100 transition-all duration-300 hover:scale-105 hover:shadow-xl inline-flex items-center gap-2">
-            Schedule Free Demo
-            <ArrowRight className="w-5 h-5" />
-          </button>
-        </div> */}
       </div>
     </div>
   );

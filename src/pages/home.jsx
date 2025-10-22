@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../components/Navbar'
+// import Navbar from '../components/Navbar'
 import Hero from '../components/Hero'
 import About from '../components/About'
 import TestimonialsSection from '../components/testimonial'
@@ -8,11 +8,13 @@ import BusinessNeed from '../components/whyBusNeed'
 import WhyChoose from '../components/whyChoose'
 import GetStarted from '../components/getStarted'
 import CTASection from '../components/CTA'
+// import PopupForm from '../components/PopupForm'
 
 const Home = () => {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
+      {/* <PopupForm /> */}
       <Hero />
       <About />
       <TestimonialsSection />
