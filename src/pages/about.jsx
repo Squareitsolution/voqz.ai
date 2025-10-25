@@ -15,49 +15,49 @@ import { Link } from "react-router-dom";
 export default function AboutUs() {
   const goals = [
     {
-      icon: <Target className="w-6 h-6" />,
+      icon: <Target className="w-8 h-8 text-teal-400" />,
       title: "Market Leadership",
       description: "Become the go-to AI automation partner globally.",
-      color: "from-teal-500 to-cyan-500",
+      // color: "from-teal-500 to-cyan-500",
     },
     {
-      icon: <Globe className="w-6 h-6" />,
+      icon: <Globe className="w-8 h-8 text-teal-400" />,
       title: "Global Impact",
       description: "Transform 100,000+ businesses through AI.",
-      color: "from-blue-500 to-indigo-500",
+      // color: "from-blue-500 to-indigo-500",
     },
     {
-      icon: <Lightbulb className="w-6 h-6" />,
+      icon: <Lightbulb className="w-8 h-8 text-teal-400" />,
       title: "Innovation Excellence",
       description: "Set benchmarks for voice AI technology.",
-      color: "from-purple-500 to-pink-500",
+      // color: "from-purple-500 to-pink-500",
     },
     {
-      icon: <TrendingUp className="w-6 h-6" />,
+      icon: <TrendingUp className="w-8 h-8 text-teal-400" />,
       title: "Customer Success",
       description: "Deliver industry-leading ROI and satisfaction.",
-      color: "from-orange-500 to-amber-500",
+      // color: "from-orange-500 to-amber-500",
     },
   ];
 
   const values = [
     {
-      icon: <Users className="w-7 h-7 text-teal-400" />,
+      icon: <Users className="w-7 h-7 text-teal-600" />,
       title: "Client Success First",
       description: "Your wins are our wins.",
     },
     {
-      icon: <Sparkles className="w-7 h-7 text-teal-400" />,
+      icon: <Sparkles className="w-7 h-7 text-teal-600" />,
       title: "Innovation Always",
       description: "Pushing AI boundaries every day.",
     },
     {
-      icon: <Award className="w-7 h-7 text-teal-400" />,
+      icon: <Award className="w-7 h-7 text-teal-600" />,
       title: "Excellence in Delivery",
       description: "From product to support, quality comes first.",
     },
     {
-      icon: <Heart className="w-7 h-7 text-teal-400" />,
+      icon: <Heart className="w-7 h-7 text-teal-600" />,
       title: "Empowering Growth",
       description: "Helping businesses unlock their full potential.",
     },
@@ -246,7 +246,7 @@ export default function AboutUs() {
               {goals.map((goal, index) => (
                 <div
                   key={index}
-                  className="p-6 bg-slate-900/60 rounded-2xl border border-slate-800 hover:border-teal-500/40 transition-all duration-300 hover:scale-[1.03]"
+                  className="p-6 bg-gradient-to-r from-slate-700 to-slate-500 rounded-2xl hover:border-teal-500/40 transition-all duration-300 hover:scale-[1.03]"
                 >
                   <div
                     className={`w-12 h-12 mx-auto bg-gradient-to-br ${goal.color} rounded-lg flex items-center justify-center mb-4`}
@@ -273,13 +273,13 @@ export default function AboutUs() {
               {values.map((value, index) => (
                 <div
                   key={index}
-                  className="p-6 rounded-2xl border border-slate-800 bg-slate-950/50 hover:border-teal-500/40 transition-all duration-300"
+                  className="p-6 rounded-2xl border border-slate-800 bg-slate-300 hover:scale-110 cursor-pointer transition-all duration-300"
                 >
                   <div className="mb-4 flex justify-center">{value.icon}</div>
-                  <h3 className="text-xl font-semibold text-white mb-2">
+                  <h3 className="text-xl font-semibold text-black mb-2">
                     {value.title}
                   </h3>
-                  <p className="text-gray-400">{value.description}</p>
+                  <p className="text-gray-700">{value.description}</p>
                 </div>
               ))}
             </div>
