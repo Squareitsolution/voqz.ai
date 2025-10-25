@@ -109,8 +109,8 @@ export default function Contact() {
         {/* Banner Section */}
         <div className="text-center mb-12 sm:mb-16">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6">
-            We'd Love to
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-teal-200">
+            We'd Love to{" "}
+            <span className=" text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-teal-200">
               Hear From You
             </span>
           </h1>
@@ -125,22 +125,22 @@ export default function Contact() {
           {/* Left Column - Contact Info */}
           <div className="lg:col-span-1 space-y-6">
             {/* Reach Us Directly Card */}
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 sm:p-8">
-              <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6 sm:mb-8">
+            <div className="bg-slate-300 backdrop-blur-sm border border-white/10 rounded-2xl p-6 sm:p-8">
+              <h2 className="text-2xl sm:text-3xl font-bold text-black mb-6 sm:mb-8">
                 Reach Us Directly
               </h2>
 
               <div className="space-y-6">
                 {/* Email */}
                 <div className="flex items-start gap-4 group cursor-pointer">
-                  <div className="w-12 h-12 bg-teal-500/10 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-teal-500/20 transition-colors">
-                    <Mail className="w-6 h-6 text-teal-400" />
+                  <div className="w-12 h-12 bg-teal-500/60 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-teal-500/20 transition-colors">
+                    <Mail className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <p className="text-slate-400 text-sm mb-1">Email</p>
+                    <p className="text-slate-700 text-sm mb-1">Email</p>
                     <a
                       href="mailto:info@voqz.ai"
-                      className="text-white font-semibold hover:text-teal-400 transition-colors"
+                      className="text-black font-semibold hover:text-teal-400 transition-colors"
                     >
                       info@voqz.ai
                     </a>
@@ -149,60 +149,62 @@ export default function Contact() {
 
                 {/* Phone */}
                 <div className="flex items-start gap-4 group cursor-pointer">
-                  <div className="w-12 h-12 bg-teal-500/10 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-teal-500/20 transition-colors">
-                    <Phone className="w-6 h-6 text-teal-400" />
+                  <div className="w-12 h-12 bg-teal-500/60 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-teal-500/20 transition-colors">
+                    <Phone className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <p className="text-slate-400 text-sm mb-1">Phone</p>
+                    <p className="text-slate-700 text-sm mb-1">Phone</p>
                     <a
-                      href="tel:+91XXXXXXXXXX"
-                      className="text-white font-semibold hover:text-teal-400 transition-colors"
+                      href="tel:+61468488102"
+                      className="text-black font-semibold hover:text-teal-400 transition-colors"
                     >
-                      +91-XXXXXXXXXX
+                      +61 46848 8102
                     </a>
                   </div>
                 </div>
 
                 {/* Office */}
                 <div className="flex items-start gap-4 group">
-                  <div className="w-12 h-12 bg-teal-500/10 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-teal-500/20 transition-colors">
-                    <MapPin className="w-6 h-6 text-teal-400" />
+                  <div className="w-12 h-12 bg-teal-500/60 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-teal-500/20 transition-colors">
+                    <MapPin className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <p className="text-slate-400 text-sm mb-1">Office</p>
-                    <p className="text-white font-semibold">Global Remote Team</p>
+                    <p className="text-slate-700 text-sm mb-1">Location</p>
+                    <p className="text-black font-semibold">
+                      Sydney, Australia
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Social Media */}
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 sm:p-8">
-              <h3 className="text-xl font-bold text-white mb-4">Follow Us</h3>
+            <div className="bg-slate-300 backdrop-blur-sm border border-white/10 rounded-2xl p-6 sm:p-8">
+              <h3 className="text-xl font-bold text-black mb-4">Follow Us</h3>
               <div className="flex gap-3">
                 <a
                   href="#"
-                  className="w-12 h-12 bg-teal-500/10 rounded-xl flex items-center justify-center hover:bg-teal-500 hover:scale-110 transition-all group"
+                  className="w-12 h-12 bg-teal-500/50 rounded-xl flex items-center justify-center hover:bg-teal-500 hover:scale-110 transition-all group"
                 >
-                  <Linkedin className="w-5 h-5 text-teal-400 group-hover:text-white" />
+                  <Linkedin className="w-5 h-5 text-white group-hover:text-white" />
                 </a>
                 <a
                   href="#"
-                  className="w-12 h-12 bg-teal-500/10 rounded-xl flex items-center justify-center hover:bg-teal-500 hover:scale-110 transition-all group"
+                  className="w-12 h-12 bg-teal-500/50 rounded-xl flex items-center justify-center hover:bg-teal-500 hover:scale-110 transition-all group"
                 >
-                  <Twitter className="w-5 h-5 text-teal-400 group-hover:text-white" />
+                  <Twitter className="w-5 h-5 text-white group-hover:text-white" />
                 </a>
                 <a
                   href="#"
-                  className="w-12 h-12 bg-teal-500/10 rounded-xl flex items-center justify-center hover:bg-teal-500 hover:scale-110 transition-all group"
+                  className="w-12 h-12 bg-teal-500/50 rounded-xl flex items-center justify-center hover:bg-teal-500 hover:scale-110 transition-all group"
                 >
-                  <Facebook className="w-5 h-5 text-teal-400 group-hover:text-white" />
+                  <Facebook className="w-5 h-5 text-white group-hover:text-white" />
                 </a>
                 <a
                   href="#"
-                  className="w-12 h-12 bg-teal-500/10 rounded-xl flex items-center justify-center hover:bg-teal-500 hover:scale-110 transition-all group"
+                  className="w-12 h-12 bg-teal-500/50 rounded-xl flex items-center justify-center hover:bg-teal-500 hover:scale-110 transition-all group"
                 >
-                  <Instagram className="w-5 h-5 text-teal-400 group-hover:text-white" />
+                  <Instagram className="w-5 h-5 text-white group-hover:text-white" />
                 </a>
               </div>
             </div>
@@ -210,11 +212,11 @@ export default function Contact() {
 
           {/* Right Column - Contact Form */}
           <div className="lg:col-span-2">
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 sm:p-8 lg:p-10">
-              <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
+            <div className="bg-slate-300 backdrop-blur-sm border border-white/10 rounded-2xl p-6 sm:p-8 lg:p-10">
+              <h2 className="text-2xl sm:text-3xl font-bold text-black mb-4">
                 Send Us a Message
               </h2>
-              <p className="text-slate-300 mb-8">
+              <p className="text-slate-800 mb-8">
                 Have a question or project idea? Fill out the form and we'll get
                 back to you within 24 hours.
               </p>
@@ -222,7 +224,7 @@ export default function Contact() {
               <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Full Name */}
                 <div>
-                  <label className="block text-white font-semibold mb-2 text-sm sm:text-base">
+                  <label className="block text-black font-semibold mb-2 text-sm sm:text-base">
                     Full Name *
                   </label>
                   <div className="relative">
@@ -233,7 +235,7 @@ export default function Contact() {
                       value={formData.name}
                       onChange={handleChange}
                       placeholder="Enter your full name"
-                      className="w-full bg-white/5 border border-white/10 rounded-xl px-12 py-3 sm:py-4 text-white placeholder-slate-500 focus:outline-none focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20 transition-all"
+                      className="w-full bg-white border border-white/10 rounded-xl px-12 py-3 sm:py-4 text-gray-800 placeholder-slate-500 focus:outline-none focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20 transition-all"
                       required
                     />
                   </div>
@@ -241,7 +243,7 @@ export default function Contact() {
 
                 {/* Email */}
                 <div>
-                  <label className="block text-white font-semibold mb-2 text-sm sm:text-base">
+                  <label className="block text-black font-semibold mb-2 text-sm sm:text-base">
                     Email Address *
                   </label>
                   <div className="relative">
@@ -252,7 +254,7 @@ export default function Contact() {
                       value={formData.email}
                       onChange={handleChange}
                       placeholder="Enter your email address"
-                      className="w-full bg-white/5 border border-white/10 rounded-xl px-12 py-3 sm:py-4 text-white placeholder-slate-500 focus:outline-none focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20 transition-all"
+                      className="w-full bg-white border border-white/10 rounded-xl px-12 py-3 sm:py-4 text-gray-800 placeholder-slate-500 focus:outline-none focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20 transition-all"
                       required
                     />
                   </div>
@@ -260,9 +262,9 @@ export default function Contact() {
 
                 {/* Company */}
                 <div>
-                  <label className="block text-white font-semibold mb-2 text-sm sm:text-base">
+                  <label className="block text-black font-semibold mb-2 text-sm sm:text-base">
                     Company Name{" "}
-                    <span className="text-slate-400 font-normal">
+                    <span className="text-slate-600 font-normal">
                       (Optional)
                     </span>
                   </label>
@@ -274,14 +276,14 @@ export default function Contact() {
                       value={formData.company}
                       onChange={handleChange}
                       placeholder="Enter your company name"
-                      className="w-full bg-white/5 border border-white/10 rounded-xl px-12 py-3 sm:py-4 text-white placeholder-slate-500 focus:outline-none focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20 transition-all"
+                      className="w-full bg-white border border-white/10 rounded-xl px-12 py-3 sm:py-4 text-gray-800 placeholder-slate-500 focus:outline-none focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20 transition-all"
                     />
                   </div>
                 </div>
 
                 {/* Message */}
                 <div>
-                  <label className="block text-white font-semibold mb-2 text-sm sm:text-base">
+                  <label className="block text-black font-semibold mb-2 text-sm sm:text-base">
                     Message *
                   </label>
                   <div className="relative">
@@ -292,8 +294,7 @@ export default function Contact() {
                       onChange={handleChange}
                       rows="5"
                       placeholder="Tell us about your project or question..."
-                      className="w-full bg-white/5 border border-white/10 rounded-xl px-12 py-4 text-white placeholder-slate-500 focus:outline-none focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20 transition-all resize-none"
-                      
+                      className="w-full bg-white border border-white/10 rounded-xl px-12 py-4 text-gray-800 placeholder-slate-500 focus:outline-none focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20 transition-all resize-none"
                     ></textarea>
                   </div>
                 </div>

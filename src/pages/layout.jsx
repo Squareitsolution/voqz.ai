@@ -10,7 +10,7 @@ import EnquiryFormPopup from "../components/PopupForm";
 const MainLayout = () => {
   return (
     <>
-      <FloatingButtons />
+      {/* <FloatingButtons /> */}
 
       <Navbar />
       <EnquiryFormPopup />

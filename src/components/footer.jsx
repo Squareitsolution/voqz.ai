@@ -87,9 +87,9 @@ const Footer = () => {
               </p>
 
               {/* Contact info */}
-              <div className="space-y-3 animate-fade-in-delay-2">
+              {/* <div className="space-y-3 animate-fade-in-delay-2">
                 <a
-                  href="tel:+918877665544"
+                  href="tel:+61468488102"
                   className="flex items-center gap-3 text-white/90 hover:text-white transition-all duration-300 group hover:translate-x-1"
                 >
                   <div className="size-8 rounded-lg bg-purple-600/20 border border-purple-500/30 flex items-center justify-center group-hover:bg-purple-600/40 group-hover:border-purple-400/50 transition-all duration-300 group-hover:scale-110">
@@ -101,7 +101,7 @@ const Footer = () => {
                       <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                     </svg>
                   </div>
-                  <span className="font-medium">+91 8877665544</span>
+                  <span className="font-medium">+61 46848 8102</span>
                 </a>
 
                 <a
@@ -120,41 +120,39 @@ const Footer = () => {
                   </div>
                   <span className="font-medium">hello@voqz.ai</span>
                 </a>
-              </div>
+              </div> */}
             </div>
 
             {/* Navigation column */}
-<div className="animate-fade-in-delay">
-  <h3 className="text-white font-semibold mb-4 relative">
-    Quick Links
-    <div className="absolute -bottom-1 left-0 w-8 h-0.5 bg-gradient-to-r from-purple-400 to-transparent animate-expand"></div>
-  </h3>
-  <ul className="space-y-3">
-    {[
-      { name: "Home", path: "/" },
-      { name: "About", path: "/about" },
-      { name: "Services", path: "/services" },
-      { name: "FAQs", path: "/faqs" },
-      { name: "Contact", path: "/contact" },
-    ].map((item, index) => (
-      <li
-        key={item.name}
-        className="animate-slide-in"
-        style={{ animationDelay: `${0.1 * index}s` }}
-      >
-        <Link
-          to={item.path}
-          className="text-gray-300 hover:text-white transition-all duration-300 text-sm hover:translate-x-2 inline-block relative group"
-        >
-          <span className="relative z-10">{item.name}</span>
-          <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 rounded"></div>
-        </Link>
-      </li>
-    ))}
-  </ul>
-</div>
-
-            
+            <div className="animate-fade-in-delay">
+              <h3 className="text-white font-semibold mb-4 relative">
+                Quick Links
+                <div className="absolute -bottom-1 left-0 w-8 h-0.5 bg-gradient-to-r from-purple-400 to-transparent animate-expand"></div>
+              </h3>
+              <ul className="space-y-3">
+                {[
+                  { name: "Home", path: "/" },
+                  { name: "About", path: "/about" },
+                  { name: "Services", path: "/services" },
+                  { name: "FAQs", path: "/faqs" },
+                  { name: "Contact", path: "/contact" },
+                ].map((item, index) => (
+                  <li
+                    key={item.name}
+                    className="animate-slide-in"
+                    style={{ animationDelay: `${0.1 * index}s` }}
+                  >
+                    <Link
+                      to={item.path}
+                      className="text-gray-300 hover:text-white transition-all duration-300 text-sm hover:translate-x-2 inline-block relative group"
+                    >
+                      <span className="relative z-10">{item.name}</span>
+                      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 rounded"></div>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
             {/* Services column */}
             <div className="animate-fade-in-delay-2">
@@ -193,21 +191,21 @@ const Footer = () => {
               <ul className="space-y-4 mb-6 text-sm text-gray-300">
                 <li className="flex items-start gap-3">
                   <MapPin className="w-5 h-5 text-purple-400 flex-shrink-0 mt-1" />
-                  <span>
-                    1234 Innovation Drive, Suite 200 <br />
-                    San Francisco, CA 94105, USA
-                  </span>
+                  <span>Sydney, Australia</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <Phone className="w-5 h-5 text-purple-400 flex-shrink-0" />
-                  <a href="tel:+14155552671" className="hover:text-white">
-                    +1 (415) 555-2671
+                  <a href="tel:+61468488102" className="hover:text-white">
+                    +61 46848 8102
                   </a>
                 </li>
                 <li className="flex items-center gap-3">
                   <Mail className="w-5 h-5 text-purple-400 flex-shrink-0" />
-                  <a href="mailto:contact@vihu.ai" className="hover:text-white">
-                    contact@vihu.ai
+                  <a href="mailto:hello@Voqz.ai" className="hover:text-white">
+                    hello@Voqz.ai
+                  </a>
+                  <a href="mailto:team@voqz.ai" className="hover:text-white">
+                    team@voqz.ai
                   </a>
                 </li>
               </ul>
@@ -256,10 +254,10 @@ const Footer = () => {
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 animate-fade-in-delay-4">
             <div className="flex items-center gap-4 text-sm text-gray-400">
               <span>© {currentYear} Voqz.ai. All rights reserved.</span>
-              <span className="hidden sm:block">•</span>
-              <span className="hidden sm:block animate-pulse-subtle">
+              {/* <span className="hidden sm:block">•</span> */}
+              {/* <span className="hidden sm:block animate-pulse-subtle">
                 Made with ❤️ in India
-              </span>
+              </span> */}
             </div>
 
             <div className="flex items-center gap-6 text-sm">

@@ -34,7 +34,7 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Nav */}
-        <ul className="hidden lg:flex gap-7 text-white/90">
+        <ul className="hidden lg:flex gap-7 lg:py-3 py-2 text-white/90">
           {navLinks.map(({ name, path }) => (
             <li key={name}>
               <Link
@@ -53,7 +53,7 @@ const Navbar = () => {
             href="tel:+918877665544"
             className="rounded-xl px-3 py-1.5 font-semibold text-white/90 ring-1 ring-white/25 bg-purple-500/70 hover:bg-purple-400/80 hover:text-white transition-colors"
           >
-            +91 8877665544
+            Get In Touch
           </a>
         </div>
 

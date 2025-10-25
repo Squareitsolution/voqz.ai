@@ -99,8 +99,8 @@ export default function FAQ() {
         {/* Header */}
         <div className="text-center mb-12 sm:mb-16">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6">
-            Frequently Asked
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-teal-200">
+            Frequently Asked {" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-teal-200">
               Questions
             </span>
           </h1>

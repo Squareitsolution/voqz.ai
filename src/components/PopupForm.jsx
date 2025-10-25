@@ -34,11 +34,11 @@ export default function EnquiryFormPopup() {
     e.preventDefault();
 
     // Final validation
-    if (!/^\d{10}$/.test(form.mobile)) {
-      setPhoneError("Phone number must be exactly 10 digits");
-      toast.error("❌ Please enter a valid 10-digit phone number");
-      return;
-    }
+    // if (!/^\d{10}$/.test(form.mobile)) {
+    //   setPhoneError("Phone number must be exactly 10 digits");
+    //   toast.error("❌ Please enter a valid 10-digit phone number");
+    //   return;
+    // }
 
     const entry = {
       name: form.name.trim(),
@@ -96,7 +96,8 @@ export default function EnquiryFormPopup() {
                 Request a Callback
               </h2>
               <p className="text-sm text-slate-300 mt-2">
-                Unlock your child’s potential. Connect with us today!
+                “Unlock your business potential with AI automation.<br /> Connect with
+                us today!”
               </p>
             </div>
 
@@ -138,9 +139,7 @@ export default function EnquiryFormPopup() {
                   name="mobile"
                   value={form.mobile}
                   onChange={handleChange}
-                  placeholder="Mobile*"
-                  maxLength={10}
-                  required
+                  placeholder="Mobile (Optional)"
                   className={`w-full bg-white/5 border rounded-xl px-12 py-3 text-white placeholder-slate-400 focus:outline-none focus:ring-2 transition-all ${
                     phoneError
                       ? "border-red-500 focus:border-red-500 focus:ring-red-500/30"

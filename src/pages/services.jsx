@@ -107,17 +107,17 @@ export default function ServicesPage() {
        
 
         {/* Inbound Voice Agents */}
-        <section className="py-16 px-4 sm:px-6 lg:px-12">
+        <section className="py-16 px-4 sm:px-6 lg:px-12 bg-slate-300">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
               <div className="inline-flex items-center gap-3 mb-4">
                 <div className="w-12 h-12 bg-gradient-to-br from-teal-500 to-cyan-500 rounded-lg flex items-center justify-center">
                   <Phone className="w-6 h-6 text-white" />
                 </div>
-                <h2 className="text-3xl md:text-4xl font-bold text-white">Inbound Voice Agents</h2>
+                <h2 className="text-3xl md:text-4xl font-bold text-black">Inbound Voice Agents</h2>
               </div>
-              <p className="text-gray-400 text-lg">Conversations That Work 24/7</p>
-              <p className="text-gray-300 text-base mt-4 max-w-3xl mx-auto">
+              <p className="text-gray-700 text-lg">Conversations That Work 24/7</p>
+              <p className="text-gray-700 text-base mt-4 max-w-4xl mx-auto">
                 Our inbound AI receptionists ensure your business never misses a lead, while delivering human-like service at scale.
               </p>
             </div>
@@ -256,12 +256,12 @@ export default function ServicesPage() {
         </section>
 
         {/* Industries We Serve */}
-        <section className="py-16 px-4 sm:px-6 lg:px-12 bg-white/5">
+        <section className="py-16 px-4 sm:px-6 lg:px-12 bg-slate-300">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Industries We Serve</h2>
-              <p className="text-gray-400 text-lg">Flexible AI for Every Sector</p>
-              <p className="text-gray-300 text-base mt-4 max-w-3xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">Industries We Serve</h2>
+              <p className="text-gray-800 text-lg">Flexible AI for Every Sector</p>
+              <p className="text-gray-700 text-base mt-4 max-w-3xl mx-auto">
                 VOQZ adapts to your industry, delivering tailored voice automation that creates real results.
               </p>
             </div>
@@ -326,88 +326,11 @@ export default function ServicesPage() {
         {/* Inquiry Form */}
         <section className=" relative py-16 px-4 sm:px-6 lg:px-12">
           <div className="max-w-4xl mx-auto">
-            <div className="bg-gradient-to-br relative from-teal-500/10 to-cyan-500/10 rounded-2xl p-8 md:p-12 border border-teal-500/20 shadow-2xl">
+            <div className="relative bg-slate-300 rounded-2xl p-8 md:p-12 border border-teal-500/20 shadow-2xl">
               <div className="text-center mb-8">
-                <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
-                <p className="text-gray-300 text-lg">Fill out the form below and our team will reach out to you shortly.</p>
+                <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">Ready to Get Started?</h2>
+                <p className="text-gray-800 text-lg">Fill out the form below and our team will reach out to you shortly.</p>
               </div>
-
-              {/* <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-white text-sm font-medium mb-2">Full Name *</label>
-                    <input
-                      type="text"
-                      name="name"
-                      required
-                      value={formData.name}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 bg-[#0B1220] border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-teal-500 transition-colors"
-                      placeholder="John Doe"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-white text-sm font-medium mb-2">Email Address *</label>
-                    <input
-                      type="email"
-                      name="email"
-                      required
-                      value={formData.email}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 bg-[#0B1220] border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-teal-500 transition-colors"
-                      placeholder="john@example.com"
-                    />
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-white text-sm font-medium mb-2">Phone Number *</label>
-                    <input
-                      type="tel"
-                      name="phone"
-                      required
-                      value={formData.phone}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 bg-[#0B1220] border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-teal-500 transition-colors"
-                      placeholder="+1 (555) 000-0000"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-white text-sm font-medium mb-2">Company Name</label>
-                    <input
-                      type="text"
-                      name="company"
-                      value={formData.company}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 bg-[#0B1220] border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-teal-500 transition-colors"
-                      placeholder="Your Company"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-white text-sm font-medium mb-2">Message</label>
-                  <textarea
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    rows="4"
-                    className="w-full px-4 py-3 bg-[#0B1220] border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-teal-500 transition-colors resize-none"
-                    placeholder="Tell us about your needs..."
-                  ></textarea>
-                </div>
-
-                <div className="text-center">
-                  <button
-                    type="submit"
-                    className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-teal-500 to-cyan-500 text-white rounded-lg font-semibold text-base shadow-xl hover:shadow-2xl hover:from-teal-600 hover:to-cyan-600 transform hover:scale-105 transition-all duration-300"
-                  >
-                    <span>Submit Inquiry</span>
-                    <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
-                  </button>
-                </div>
-              </form> */}
               <div className="flex justify-center">
 
                   <Link to="/contact"
